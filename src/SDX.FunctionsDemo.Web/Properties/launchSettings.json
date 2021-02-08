@@ -1,0 +1,15 @@
+{
+    "profiles": {
+        "SDX.FunctionsDemo.Web": {
+            "commandName": "Project",
+            "launchBrowser": false,
+            "environmentVariables": {
+                //"FunctionApp:Url": "http://localhost:7071",
+                //"FunctionApp:Keys:UploadImage": "==UploadImage==",
+                //"FunctionApp:Keys:GetImage": "==GetImage==",
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "applicationUrl": "http://localhost:5000"
+        }
+    }
+}

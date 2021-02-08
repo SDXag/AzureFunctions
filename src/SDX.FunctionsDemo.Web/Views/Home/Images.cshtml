@@ -1,0 +1,38 @@
+﻿@{
+    ViewData["Title"] = "Bildinformation";
+    var images = (ImageInfo[])ViewData["images"];
+    var message = ViewData["message"];
+    var messageType = ViewData["messageType"];
+
+    // Images embedded: <img alt="..." src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIA..." />
+}
+
+<div class="text-center">
+    <h2>Das Bild wurde verarbeitet.</h2>
+    @if (message != null)
+    {
+        <div class="alert alert alert-@messageType" role="alert">
+            @message
+        </div>
+    }
+</div>
+
+<div>
+    @foreach (var image in images)
+    {
+        if (image.ImageType != SDX.FunctionsDemo.ImageProcessing.ImageTypes.Original)
+        {
+            <span class="result_image" style="line-height: @(image.ImageType.Size) px">
+                @if (image.Source != null)
+                {
+                    <span>@image.ImageType</span>
+                    <img alt="@image.ImageType" title="@image.ImageType" src="@image.Source" />
+                }
+                else
+                {
+                    <span class="image_pending">Pending: @image.ImageType</span>
+                }
+            </span>
+        }
+    }
+</div>

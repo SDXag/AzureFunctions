@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>46cf54ec-f15f-4e27-bde9-cf933774d7ca</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SDX.FunctionsDemo.ImageProcessing\SDX.FunctionsDemo.ImageProcessing.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    var message = ViewData["message"];
+    var messageType = ViewData["messageType"];
+    var imageFileService = ViewData["IImageFileService"];
+}
+
+<div class="text-center">
+    <h1 class="display-4">Hallo!</h1>
+    <p>
+        Azure Functions Demo
+    </p>
+    <p>
+        Die Verarbeitung erfolgt über: <b>@imageFileService</b>
+    </p>
+</div>
+
+<div class="text-center">
+    <h2>Bild bereitstellen:</h2>
+
+    <form method="post" action="UploadFile" enctype="multipart/form-data">
+        <div class="form-group">
+            <div class="col-md-4">
+                <input type="file" name="files" value="Bild auswählen" />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-4">
+                <input type="submit" value="Bild verarbeiten" />
+            </div>
+        </div>
+    </form>
+
+    @if (message != null)
+    {
+        <div class="alert alert alert-@messageType" role="alert">
+            @message
+        </div>
+    }
+</div>
