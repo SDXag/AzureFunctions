@@ -3,7 +3,7 @@
 ![af.png](doc/af.png) 
 Beispielanwendung zum Webinar [Serverless mit Azure Functions](https://www.sdx-ag.de/2021/01/serverless-azure-functions-webinar/##news_content).
 
-[![demo-small.png](doc/demo-small.png)]([demo.png](doc/demo.png)) 
+[![demo-small.png](doc/demo-small.png)](doc/demo.png) 
 
 ## Beschreibung des Codes
  
